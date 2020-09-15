@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 public class Ornek_HotelOlusturma extends TestBase {
     //@Test olsaydi baglama islemini yapacaktik ama Beforemethod olunca gerek kalmadi
-    @BeforeMethod
+    //@BeforeMethod
     public void giris(){
         driver.get("http://www.fhctrip-qa.com/admin/HotelAdmin/Create");
         driver.findElement(By.id("UserName")).sendKeys("manager2");
@@ -33,6 +33,7 @@ public class Ornek_HotelOlusturma extends TestBase {
     //}
     @Test
     public void hotelCreate(){
+        giris();
         WebElement codeKutusu = driver.findElement(By.id("Code"));
         WebElement nameKutusu = driver.findElement(By.id("Name"));
         WebElement adresKutusu= driver.findElement(By.id("Address"));

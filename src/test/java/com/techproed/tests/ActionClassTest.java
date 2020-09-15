@@ -17,6 +17,7 @@ public class ActionClassTest extends TestBase {
         // actions class ile işlem yaparsanız, HER SEFERİNDE "PERFORM" yapmak zorundasınız.
         actions.contextClick(element).perform();
     }
+
     @Test
     public void ciftTiklama(){
         driver.get("http://demo.guru99.com/test/simple_context_menu.html");
@@ -52,6 +53,7 @@ public class ActionClassTest extends TestBase {
             e.printStackTrace();
         }
         actions.sendKeys(Keys.PAGE_UP).perform();
+
     }
     @Test
     public void buyukKucukYazma(){
@@ -72,12 +74,13 @@ public class ActionClassTest extends TestBase {
                 .perform();
     }
     @Test
-    public void dragAndDrop(){  // sürükle - bırak
+    public void dragAndDrop() throws InterruptedException {  // sürükle - bırak
         driver.get("http://google.com");
         WebElement aramaKutusu = driver.findElement(By.name("q"));
         WebElement logo = driver.findElement(By.id("hplogo"));
         Actions actions = new Actions(driver);
         // logo webelementini, aramaKutusu webelementine sürükle ve bırak.
+        Thread.sleep(2000);
         actions.dragAndDrop(logo,aramaKutusu).perform();
     }
 
