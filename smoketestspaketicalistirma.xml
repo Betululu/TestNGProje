@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite - smoketests paketi">
+    <test name="Test - smoketests paket testleri">
+
+
+        <packages>
+
+
+            <!-- istedigimiz butun paketleri buraya yazarak calistirabiliriz
+             -->
+            <!-- XML dosyasında değişiklik yaptıktan sonra, dosyayı CTRL+S
+                 ile ya da File->Save All ile kaydetmeniz gerekiyorç
+           -->
+
+
+            <package name="com.techproed.smoketests"></package>
+
+
+
+        </packages>
+
+
+    </test>
+</suite>

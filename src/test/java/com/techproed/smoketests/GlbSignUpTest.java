@@ -17,7 +17,7 @@ public class GlbSignUpTest {
      * 5. Adım : Success yazısını görüp görmediğimi Assert ile doğrulayalım.
      *
      */
-    @Test
+    @Test( groups = "glbtrader")
     public void test(){
         Driver.getDriver().get(ConfigurationReader.getProperty("glb_login"));
         GlbSignUpPage glbSignUpPage = new GlbSignUpPage();
