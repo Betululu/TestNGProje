@@ -4,7 +4,7 @@ import com.techproed.pages.AmazonPage;
 import com.techproed.utilities.TestBase;
 import org.testng.annotations.Test;
 
-public class AmozonTest  extends TestBase {
+public class AmazonTest extends TestBase {
 
     @Test
     public void aramaTesti() {

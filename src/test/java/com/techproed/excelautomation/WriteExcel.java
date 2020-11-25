@@ -26,6 +26,7 @@ public class WriteExcel {
         // FileOutputStream class'ından bir tane nesne oluşturmamız gerekiyor.
         FileOutputStream fileOutputStream = new FileOutputStream(dosyaYolu);
 
+
         // ÜLKELER  BAŞKENTLER  NEYIMESHUR  NÜFUS
         // 0. indexteki satırın, 3. indexteki hücresine NÜFUS hücresi ekleyelim
         workbook.getSheetAt(0).getRow(0).createCell(3).setCellValue("NÜFUS");
@@ -42,6 +43,8 @@ public class WriteExcel {
         // yaptığımız değişiklikleri excel dosyasına aktarır, veriyi yazar ve kaydeder.
         workbook.write(fileOutputStream);
 
+        // veriler hafizada yer kaplamasin kapatilsin diye
+        
         fileOutputStream.close();
         workbook.close();
         fileInputStream.close();

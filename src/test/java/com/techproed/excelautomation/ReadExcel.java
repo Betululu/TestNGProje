@@ -25,10 +25,10 @@ public class ReadExcel {
         // 1. Hücreyi alalım. (index değeri 0'dan başlar.)
         Cell ulkeler      = row.getCell(0);
         Cell baskentler   = row.getCell(1);
-        Cell meshurlar    = row.getCell(2);
+        Cell neyimeshur    = row.getCell(2);
         System.out.println(ulkeler);
         System.out.println(baskentler);
-        System.out.println(meshurlar);
+        System.out.println(neyimeshur);
 
         // Excel'e Git -> Sheet 0'a git -> 2. İndexteki Satıra git -> 1. İndexteki Hücre
         System.out.println(workbook.getSheetAt(0).getRow(3).getCell(1));
@@ -51,10 +51,11 @@ public class ReadExcel {
         //Tum Ulkeler
         int sonSatirinIndexi = workbook.getSheetAt(0).getLastRowNum(); // 10
         for(int i = 0 ; i <= sonSatirinIndexi ; i++){
-            System.out.print(workbook.getSheetAt(0).getRow(i).getCell(0));
+            System.out.print(workbook.getSheetAt(0).getRow(i).getCell(0)+ " ");
         }
         // bir satırın son sütunun indexini alma
         // 1 den basliyor
+        System.out.println();
         int sonSutunIndex = workbook.getSheetAt(0).getRow(0).getLastCellNum();
         System.out.println("Son Sütun İndex : " + sonSutunIndex);
         //Turkiye Ankara Kedi satiri
